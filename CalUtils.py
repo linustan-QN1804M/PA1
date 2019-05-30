@@ -22,3 +22,4 @@ class CalUtils:
 
             print('Student average height is ' + str(round(self.totalStudentHeight/self.totalStudentCount, 2)) +
                   'm for ' + str(self.totalStudentCount) + ' students.')
+
