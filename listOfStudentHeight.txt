@@ -1,3 +1,0 @@
-"Benjamin Tan", 1.65
-"Lorell, Tay", 1.60
-"Bobby Arachnid", 1.72

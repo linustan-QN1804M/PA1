@@ -1,10 +1,7 @@
-import csv
-
-
 class CalUtils:
 
-    def __init__(self, filename):
-        self.targetfilename = filename
+    def __init__(self, listOfStudentHeight):
+        self.targetfilename = listOfStudentHeight
 
     def calAvgHeight(self):
         names = []
@@ -13,11 +10,11 @@ class CalUtils:
         self.totalStudentCount = 0
 
         with open(self.targetfilename, 'r') as file:
-            parsed = csv.reader(file)
-            for line in parsed:
-                names.append(line[0])
-                heights.append(float(line[1]))
-                self.totalStudentHeight += float(line[1])
+            for line in file:
+                splitline = line.split("\t")
+                names.append(splitline[0])
+                heights.append(float(splitline[1]))
+                self.totalStudentHeight += float(splitline[1])
                 self.totalStudentCount += 1
 
             print('Student average height is ' + str(round(self.totalStudentHeight/self.totalStudentCount, 2)) +
